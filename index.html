@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/scripts.js" defer></script>
+    <title>Busca CEP</title>
+  </head>
+  <body>
+    <div class="container-title">
+      <h1 class="title">Busca CEP</h1>
+    </div>
+    <div class="container-principal">
+      <div class="second-container">
+        <div class="enter-container">
+          <label for="input-cep" class="labels">CEP: </label>
+          <input type="text" id="input-cep" class="inputs" maxlength="8" />
+
+          <button class="submit-cep">Localizar</button>
+        </div>
+
+        <div class="container-result">
+          <div class="row-1">
+            <label for="localidade" class="labels">Localidade: </label>
+            <input type="text" id="input-localidade" class="inputs"/>
+          </div>
+
+          <div class="row-2">
+            <label for="input-uf" class="labels">UF: </label>
+            <input type="text"  id="input-uf" class="inputs"/>
+          </div>
+            
+          <div class="row-3">
+            <label for="input-logradouro" class="labels">Logradouro: </label>
+            <input type="text" id="input-logradouro" class="inputs"/>
+          </div>
+
+          <div class="row-4">
+            <label for="input-bairro" class="labels">Bairro: </label>
+            <input type="text" id="input-bairro" class="inputs"/>
+          </div>
+            
+          
+          <div class="row-5">
+            <label for="input-ddd" class="labels">DDD: </label>
+            <input type="text" id="input-ddd" class="inputs"/>
+          </div>
+
+          <div class="row-6">
+            <button class="clear">Limpar</button>
+          </div>
+            
+          
+        </div>
+      
+      </div>
+      <div class="container-image">
+        <img src="img/mapa_brasil.png" alt="mapa do Brasil" class="image-map">
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
