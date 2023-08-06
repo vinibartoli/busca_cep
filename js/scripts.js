@@ -15,9 +15,15 @@ async function getCep() {
   const url = `https://viacep.com.br/ws/${cepValue}/json/`
   const resultRegex = regexNumeros.test(cepValue)
 
-  if(cepValue.length < 8 || resultRegex == false) {
+  if(cepValue.length != 8 || resultRegex == false) {
     alert("O CEP deve conter 8 digitos, sendo eles apenas números")
+    localidade.value = ""
+    uf.value = ""
+    logradouro.value = ""
+    bairro.value = ""
+    ddd.value = ""
     cep.value = ""
+    cep.focus()
   } else {
     const dados = await fetch(url)
     const endereco = await dados.json() 
@@ -31,6 +37,7 @@ async function getCep() {
       bairro.value = ""
       ddd.value = ""
       cep.value = ""
+      cep.focus()
     } else {
       localidade.value = endereco.localidade
       uf.value = endereco.uf
@@ -48,4 +55,5 @@ function clearInputs() {
   bairro.value = ""
   ddd.value = ""
   cep.value = ""
+  cep.focus()
 }
