@@ -10,7 +10,8 @@
 }
 
 body{
-  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .container-title{
@@ -87,4 +88,43 @@ cursor: pointer;
 border-radius: 1rem;
 font-weight: 800;
 border: solid 1px black;
+}
+
+/* mobile */
+
+@media(max-width: 450px) {
+
+  .container-title{
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-principal{
+    flex-direction: column;
+    max-width: 100vh;
+  }
+
+  .second-container{
+    height: 100%;
+    width: 100%;
+  }
+
+  .inputs{
+    width: 80%;
+  }
+
+  .container-image{
+    min-width: 100%;
+    display: flex;
+    flex-direction: end;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-map{
+    margin-top: 20px;
+    height: 40vh;
+    width: 40vh;
+  }
 }
